@@ -183,6 +183,35 @@ The command runs as a subtask and follows the same 7-phase methodology as Claude
 </details>
 
 <details>
+<summary><h4 id="-qodercli">⚡ Qodercli</h4></summary>
+
+**Step 1: Install the Skill**
+
+```bash
+git clone https://github.com/HKUDS/CLI-Anything.git
+bash CLI-Anything/qodercli-skill/scripts/install.sh
+```
+
+This installs the skill to `$QODER_HOME/skills/cli-anything` (or `~/.qoder/skills/cli-anything` if `QODER_HOME` is unset).
+
+Restart Qodercli after installation so it is discovered.
+
+**Step 2: Use CLI-Anything from Qodercli**
+
+Describe the task in natural language, for example:
+
+```text
+Use CLI-Anything to build a harness for ./gimp
+Use CLI-Anything to refine ./shotcut for picture-in-picture workflows
+Use CLI-Anything to validate ./libreoffice
+```
+
+The Qodercli skill adapts the same methodology used by the Claude Code plugin and
+OpenCode commands, while keeping the generated Python harness format unchanged.
+
+</details>
+
+<details>
 <summary><h4 id="-more-platforms-coming-soon">🔮 More Platforms (Coming Soon)</h4></summary>
 
 CLI-Anything is designed to be platform-agnostic. Support for more AI coding agents is planned:
@@ -209,7 +238,6 @@ cli-anything-gimp --json layer add -n "Background" --type solid --color "#1a1a2e
 # Enter interactive REPL
 cli-anything-gimp
 ```
-
 ---
 
 ## 💡 CLI-Anything's Vision: Building Agent-Native Software

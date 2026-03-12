@@ -183,6 +183,34 @@ cp CLI-Anything/cli-anything-plugin/HARNESS.md .opencode/commands/
 </details>
 
 <details>
+<summary><h4 id="-qodercli">⚡ Qodercli</h4></summary>
+
+**第一步：安装 Skill**
+
+```bash
+git clone https://github.com/HKUDS/CLI-Anything.git
+bash CLI-Anything/qodercli-skill/scripts/install.sh
+```
+
+这会将 skill 安装到 `$QODER_HOME/skills/cli-anything`（如果未设置 `QODER_HOME`，则为 `~/.qoder/skills/cli-anything`）。
+
+安装后重启 Qodercli 以使其被发现。
+
+**第二步：在 Qodercli 中使用 CLI-Anything**
+
+用自然语言描述任务，例如：
+
+```text
+Use CLI-Anything to build a harness for ./gimp
+Use CLI-Anything to refine ./shotcut for picture-in-picture workflows
+Use CLI-Anything to validate ./libreoffice
+```
+
+Qodercli skill 采用与 Claude Code 插件和 OpenCode 命令相同的方法论，同时保持生成的 Python harness 格式不变。
+
+</details>
+
+<details>
 <summary><h4 id="-更多平台即将支持">🔮 更多平台（即将支持）</h4></summary>
 
 CLI-Anything 的设计是平台无关的，计划支持更多 AI 编程工具：
@@ -209,7 +237,6 @@ cli-anything-gimp --json layer add -n "Background" --type solid --color "#1a1a2e
 # 进入交互式 REPL
 cli-anything-gimp
 ```
-
 ---
 
 ## 💡 CLI-Anything 的愿景：构建 Agent 原生的软件生态
